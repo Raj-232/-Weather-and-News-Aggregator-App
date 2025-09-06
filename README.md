@@ -49,8 +49,8 @@ The app implements unique logic to filter news based on current weather:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd WNA-App
+   git clone https://github.com/Raj-232/-Weather-and-News-Aggregator-App
+   cd -Weather-and-News-Aggregator-App
    ```
 
 2. **Install dependencies**
