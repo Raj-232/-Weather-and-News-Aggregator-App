@@ -50,20 +50,20 @@ export default function HomeScreen() {
   return (
     <View className="flex-1 bg-gray-50">
       {/* Header */}
-      <View className="bg-blue-600 pt-12 pb-4 px-4">
+      <View className="bg-primary-600 pt-12 pb-4 px-4">
         <View className="flex-row items-center justify-between">
           <Text className="text-2xl font-bold text-white">Weather & News</Text>
           <View className="flex-row gap-x-2">
             <TouchableOpacity 
               onPress={handleLocationPress}
-              className="flex-row items-center bg-blue-500 px-3 py-2 rounded-lg"
+              className="flex-row items-center bg-primary-500 px-3 py-2 rounded-lg"
             >
               <Ionicons name="location" size={16} color="white" />
               <Text className="text-white ml-1 text-sm">Location</Text>
             </TouchableOpacity>
             <TouchableOpacity 
               onPress={() => router.push('/settings')}
-              className="flex-row items-center bg-blue-500 px-3 py-2 rounded-lg"
+              className="flex-row items-center bg-primary-500 px-3 py-2 rounded-lg"
             >
               <Ionicons name="settings" size={16} color="white" />
               <Text className="text-white ml-1 text-sm">Settings</Text>
@@ -95,8 +95,8 @@ export default function HomeScreen() {
             )}
 
             {/* Weather-based News Filter Description */}
-            <View className="bg-blue-50 rounded-lg p-4 mx-4 mb-4">
-              <Text className="text-sm text-blue-800 font-medium">
+            <View className="bg-primary-50 rounded-lg p-4 mx-4 mb-4">
+              <Text className="text-sm text-primary-800 font-medium">
                 {getWeatherDescription(state.weather)}
               </Text>
             </View>

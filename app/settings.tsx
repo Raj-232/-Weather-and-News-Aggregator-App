@@ -62,7 +62,7 @@ export default function SettingsScreen() {
   return (
     <View className="flex-1 bg-gray-50">
       {/* Header */}
-      <View className="bg-blue-600 pt-12 pb-4 px-4">
+      <View className="bg-primary-600 pt-12 pb-4 px-4">
         <View className="flex-row items-center">
           <TouchableOpacity 
             onPress={() => router.back()}
@@ -83,13 +83,13 @@ export default function SettingsScreen() {
               onPress={() => handleTemperatureUnitChange('celsius')}
               className={`flex-1 py-3 px-4 rounded-lg border-2 ${
                 state.settings.temperatureUnit === 'celsius'
-                  ? 'border-blue-500 bg-blue-50'
+                  ? 'border-primary-500 bg-primary-50'
                   : 'border-gray-200 bg-white'
               }`}
             >
               <Text className={`text-center font-semibold ${
                 state.settings.temperatureUnit === 'celsius'
-                  ? 'text-blue-600'
+                  ? 'text-primary-600'
                   : 'text-gray-600'
               }`}>
                 Celsius (°C)
@@ -99,13 +99,13 @@ export default function SettingsScreen() {
               onPress={() => handleTemperatureUnitChange('fahrenheit')}
               className={`flex-1 py-3 px-4 rounded-lg border-2 ${
                 state.settings.temperatureUnit === 'fahrenheit'
-                  ? 'border-blue-500 bg-blue-50'
+                  ? 'border-primary-500 bg-primary-50'
                   : 'border-gray-200 bg-white'
               }`}
             >
               <Text className={`text-center font-semibold ${
                 state.settings.temperatureUnit === 'fahrenheit'
-                  ? 'text-blue-600'
+                  ? 'text-primary-600'
                   : 'text-gray-600'
               }`}>
                 Fahrenheit (°F)
@@ -181,16 +181,16 @@ export default function SettingsScreen() {
         </View>
 
         {/* Weather Filtering Info */}
-        <View className="bg-blue-50 mx-4 mt-4 rounded-xl p-4 border border-blue-200">
-          <Text className="text-lg font-bold text-blue-800 mb-2">About Weather-Based News Filtering</Text>
-          <Text className="text-sm text-blue-700 leading-5">
+        <View className="bg-primary-50 mx-4 mt-4 rounded-xl p-4 border border-primary-200">
+          <Text className="text-lg font-bold text-primary-800 mb-2">About Weather-Based News Filtering</Text>
+          <Text className="text-sm text-primary-700 leading-5">
             This app filters news based on current weather conditions:
           </Text>
           <View className="mt-2 space-y-1">
-            <Text className="text-sm text-blue-700">• Cold weather: Shows news about challenges and difficult times</Text>
-            <Text className="text-sm text-blue-700">• Hot weather: Shows news about concerns and urgent matters</Text>
-            <Text className="text-sm text-blue-700">• Cool weather: Shows news about success and positive developments</Text>
-            <Text className="text-sm text-blue-700">• Moderate weather: Shows balanced news coverage</Text>
+            <Text className="text-sm text-primary-700">• Cold weather: Shows news about challenges and difficult times</Text>
+            <Text className="text-sm text-primary-700">• Hot weather: Shows news about concerns and urgent matters</Text>
+            <Text className="text-sm text-primary-700">• Cool weather: Shows news about success and positive developments</Text>
+            <Text className="text-sm text-primary-700">• Moderate weather: Shows balanced news coverage</Text>
           </View>
         </View>
 
