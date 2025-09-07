@@ -62,17 +62,7 @@ export default function SettingsScreen() {
   return (
     <View className="flex-1 bg-gray-50">
       {/* Header */}
-      <View className="bg-primary-600 pt-12 pb-4 px-4">
-        <View className="flex-row items-center">
-          <TouchableOpacity 
-            onPress={() => router.back()}
-            className="mr-4 p-2"
-          >
-            <Ionicons name="arrow-back" size={24} color="white" />
-          </TouchableOpacity>
-          <Text className="text-2xl font-bold text-white">Settings</Text>
-        </View>
-      </View>
+
 
       <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
         {/* Temperature Unit Section */}

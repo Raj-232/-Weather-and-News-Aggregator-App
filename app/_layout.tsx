@@ -20,8 +20,8 @@ export default function RootLayout() {
     <AppProvider>
       <ThemeProvider value={DefaultTheme}>
         <Stack>
-          <Stack.Screen name="index" options={{ headerShown: false }} />
-          <Stack.Screen name="settings" options={{ headerShown: false }} />
+          <Stack.Screen name="index" options={{ title: 'Weather & News',headerStyle:{backgroundColor:'#3E5F90'},headerTintColor:'white'}} />
+          <Stack.Screen name="settings" options={{ title: 'Settings',headerStyle:{backgroundColor:'#3E5F90'},headerTintColor:'white'}} />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />

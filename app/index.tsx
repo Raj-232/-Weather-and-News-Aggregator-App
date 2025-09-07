@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import React, { useEffect } from 'react';
 import { Alert, RefreshControl, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { ForecastCard } from '../components/ForecastCard';
@@ -10,11 +10,11 @@ import { getWeatherDescription } from '../utils/weatherFilter';
 
 export default function HomeScreen() {
   const router = useRouter();
-  const { 
-    state, 
-    fetchWeather, 
-    fetchNews, 
-    requestLocationPermission 
+  const {
+    state,
+    fetchWeather,
+    fetchNews,
+    requestLocationPermission
   } = useApp();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function HomeScreen() {
       await requestLocationPermission();
       await fetchNews();
     };
-    
+
     initializeApp();
   }, []);
 
@@ -50,18 +50,17 @@ export default function HomeScreen() {
   return (
     <View className="flex-1 bg-gray-50">
       {/* Header */}
-      <View className="bg-primary-600 pt-12 pb-4 px-4">
-        <View className="flex-row items-center justify-between">
-          <Text className="text-2xl font-bold text-white">Weather & News</Text>
+      <Stack.Screen options={{
+        headerRight: () => (
           <View className="flex-row gap-x-2">
-            <TouchableOpacity 
+            <TouchableOpacity
               onPress={handleLocationPress}
               className="flex-row items-center bg-primary-500 px-3 py-2 rounded-lg"
             >
               <Ionicons name="location" size={16} color="white" />
               <Text className="text-white ml-1 text-sm">Location</Text>
             </TouchableOpacity>
-            <TouchableOpacity 
+            <TouchableOpacity
               onPress={() => router.push('/settings')}
               className="flex-row items-center bg-primary-500 px-3 py-2 rounded-lg"
             >
@@ -69,8 +68,9 @@ export default function HomeScreen() {
               <Text className="text-white ml-1 text-sm">Settings</Text>
             </TouchableOpacity>
           </View>
-        </View>
-      </View>
+        )
+      }} />
+
 
       <ScrollView
         className="flex-1"
@@ -82,15 +82,15 @@ export default function HomeScreen() {
         {/* Weather Section */}
         {state.weather && (
           <>
-            <WeatherCard 
-              weather={state.weather} 
-              temperatureUnit={state.settings.temperatureUnit} 
+            <WeatherCard
+              weather={state.weather}
+              temperatureUnit={state.settings.temperatureUnit}
             />
-            
+
             {state.forecast && (
-              <ForecastCard 
-                forecast={state.forecast} 
-                temperatureUnit={state.settings.temperatureUnit} 
+              <ForecastCard
+                forecast={state.forecast}
+                temperatureUnit={state.settings.temperatureUnit}
               />
             )}
 
@@ -108,7 +108,7 @@ export default function HomeScreen() {
           <Text className="text-xl font-bold text-gray-800 mb-3">
             Weather-Filtered News
           </Text>
-          
+
           {state.error && (
             <View className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
               <Text className="text-red-800 text-sm">{state.error}</Text>

@@ -94,10 +94,23 @@ The app implements unique logic to filter news based on current weather:
    - Press `a` for Android emulator
    - Scan QR code with Expo Go app on your physical device
 
+### Screenshots
+
+## Home Screen
+
+<img src="https://github.com/Raj-232/Weather-and-News-Aggregator-App/screenshots/home.jpeg" alt="Home Screen" width="350"/>
+
+
+## Settings Screen
+
+<img src="https://github.com/Raj-232/Weather-and-News-Aggregator-App/screenshots/settings.jpg" alt="Settings Screen" width="350"/>
+
+
+
 ## Project Structure
 
 ```
-WNA-App/
+Weather-and-News-Aggregator-App/
 ├── app/                    # App screens (Expo Router)
 │   ├── _layout.tsx        # Root layout with navigation
 │   ├── index.tsx          # Home screen
