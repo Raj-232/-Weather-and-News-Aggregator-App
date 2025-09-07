@@ -98,12 +98,12 @@ The app implements unique logic to filter news based on current weather:
 
 ## Home Screen
 
-<img src="https://github.com/Raj-232/Weather-and-News-Aggregator-App/screenshots/home.jpeg" alt="Home Screen" width="350"/>
+<img src="https://github.com/Raj-232/Weather-and-News-Aggregator-App/blob/main/screenshots/home.jpeg" alt="Home Screen" width="350"/>
 
 
 ## Settings Screen
 
-<img src="https://github.com/Raj-232/Weather-and-News-Aggregator-App/screenshots/settings.jpg" alt="Settings Screen" width="350"/>
+<img src="https://github.com/Raj-232/Weather-and-News-Aggregator-App/blob/main/screenshots/seetings.jpeg" alt="Settings Screen" width="350"/>
 
 
 
